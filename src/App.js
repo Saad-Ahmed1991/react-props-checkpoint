@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Profile from "./profile/Profile";
+import "semantic-ui-css/semantic.min.css";
+import profile_pic from "./profile/profile_pic.jpg";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profile
+        fullName="Ahmed Saad"
+        bio="31 years old job seeker"
+        profession="Fullstack web developper"
+        handleName={(x) => {
+          alert(x);
+        }}
+      >
+        {profile_pic}
+      </Profile>
     </div>
   );
 }
